@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Bautizo;
-class BautizosController extends Controller
+
+class ComunionesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,7 @@ class BautizosController extends Controller
      */
     public function index()
     {
-        $bautizos = Bautizo::paginate(10);
-        return view('admin.bautizos.index')->with('bautizos');
+         return view('admin.bautizos.index');
     }
 
     /**
@@ -35,7 +34,7 @@ class BautizosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
