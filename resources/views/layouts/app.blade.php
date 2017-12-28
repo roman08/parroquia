@@ -9,7 +9,6 @@
     <title>@yield('title')</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
@@ -18,6 +17,7 @@
     <!-- CSS Files -->
     <link href="{{ asset('/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link href="{{ asset('/css/material-kit.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('/css/datatables.min.css')}}" rel="stylesheet" />
 
 </head>
 
@@ -94,6 +94,7 @@
     <script src="{{ asset('/js/jquery.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('/js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('/js/material.min.js')}}"></script>
+    <script src="{{ asset('/js/datatables.min.js')}}"></script>
 
     <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
     <script src="{{ asset('/js/nouislider.min.js')}}" type="text/javascript"></script>
@@ -119,7 +120,8 @@
 
         $(document).ready(function() 
         {
-             $('#comuniones').DataTable();
+             $('#comuniones').DataTable({});
+             $('#bautizo').DataTable({});
         } );
     </script>
 </html>

@@ -21,7 +21,7 @@
                             <th>Nombre</th>
                             <th>Fecha de Comunión</th>
                             
-                            <th class="text-right">Actions</th>
+                            <th class="text-right">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>

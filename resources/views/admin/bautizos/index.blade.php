@@ -13,7 +13,7 @@
         <div class="team">
             <div class="row">
                 <a href="{{ route('bautizo.create') }}" class="btn btn-primary">Nuevo Registro</a>
-                <table class="table">
+                <table class="table" id="bautizo">
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
@@ -22,7 +22,7 @@
                             <th class="text-center">Libro</th>
                             <th class="text-center">Nombre</th>
                             
-                            <th class="text-center">Actions</th>
+                            <th class="text-center">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
