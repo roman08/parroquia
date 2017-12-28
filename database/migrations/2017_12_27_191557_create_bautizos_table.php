@@ -21,6 +21,7 @@ class CreateBautizosTable extends Migration
             $table->date('fecha_nacimiento')->nullable();
 
             $table->integer('no_libro')->nullable();
+            $table->integer('folio')->nullable();
             
             $table->string('parroquia')->nullable();
             $table->string('decanato')->nullable();

@@ -14,7 +14,8 @@ class BautizosController extends Controller
     public function index()
     {
         $bautizos = Bautizo::paginate(10);
-        return view('admin.bautizos.index')->with('bautizos');
+
+        return view('admin.bautizos.index',compact('bautizos'));
     }
 
     /**
@@ -35,7 +36,26 @@ class BautizosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bautizo = new Bautizo();
+        $bautizo->no_libro = $request->input('no_libro');
+        $bautizo->decanato = $request->input('decanato');
+        $bautizo->acta = $request->input('acta');
+        $bautizo->fecha_bautizo = $request->input('fecha_bautizo');
+        $bautizo->nombre = $request->input('nombre');
+        $bautizo->fecha_nacimiento = $request->input('fecha_nacimiento');
+        $bautizo->padre = $request->input('padre');
+        $bautizo->madre = $request->input('madre');
+        $bautizo->padrino = $request->input('padrino');
+        $bautizo->madrina = $request->input('madrina');
+        $bautizo->parroco = $request->input('parroco');
+        $bautizo->lugar_nacimiento = $request->input('lugar_nacimiento');
+        $bautizo->parroquia = 'San Francisco de Asís';
+        $bautizo->fecha = '2017-12-28';
+        $bautizo->folio = $request->input('folio');
+        if($bautizo->save())
+        {
+            return redirect('/registro/bautizo/');
+        }
     }
 
     /**
@@ -46,7 +66,8 @@ class BautizosController extends Controller
      */
     public function show($id)
     {
-        //
+        $bautizo = Bautizo::find($id);
+        return view('admin.bautizos.show',compact('bautizo'));
     }
 
     /**
@@ -57,7 +78,8 @@ class BautizosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bautizo = Bautizo::find($id);
+        return view('admin.bautizos.update',compact('bautizo'));
     }
 
     /**
@@ -69,7 +91,27 @@ class BautizosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $bautizo = Bautizo::find($id);
+        $bautizo->no_libro = $request->input('no_libro');
+        $bautizo->decanato = $request->input('decanato');
+        $bautizo->acta = $request->input('acta');
+        $bautizo->fecha_bautizo = $request->input('fecha_bautizo');
+        $bautizo->nombre = $request->input('nombre');
+        $bautizo->fecha_nacimiento = $request->input('fecha_nacimiento');
+        $bautizo->padre = $request->input('padre');
+        $bautizo->madre = $request->input('madre');
+        $bautizo->padrino = $request->input('padrino');
+        $bautizo->madrina = $request->input('madrina');
+        $bautizo->parroco = $request->input('parroco');
+        $bautizo->lugar_nacimiento = $request->input('lugar_nacimiento');
+        $bautizo->parroquia = 'San Francisco de Asís';
+        $bautizo->fecha = '2017-12-28';
+        $bautizo->folio = $request->input('folio');
+        if($bautizo->save())
+        {
+            return redirect('/registro/bautizo/');
+        }
+        
     }
 
     /**
@@ -80,6 +122,9 @@ class BautizosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bautizo = Bautizo::find($id);
+        $bautizo->delete();
+
+        return back();
     }
 }

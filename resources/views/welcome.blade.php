@@ -6,7 +6,7 @@
 <div class="container">
 <div class="row">
     <div class="col-md-6">
-        <h1 class="title">Parroquia San Francisco de Así s.</h1>
+        <h1 class="title">Parroquia San Francisco de Asís.</h1>
         <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore iure a recusandae, cumque quo officiis sapiente repudiandae sed cum. Tempore ut nam sit, debitis nobis consequuntur voluptatibus dicta accusantium, odit.</h4>
 
     </div>

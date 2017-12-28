@@ -24,8 +24,11 @@ Rutas para el moudlo de bautizo
  */
 Route::name('bautizo.index')->get('/registro/bautizo','BautizosController@index');
 Route::name('bautizo.create')->get('/registro/bautizo/create','BautizosController@create');
-Route::name('bautizo.store')->post('/registro/bautizo/','BautizosController@store');
-
+Route::name('bautizo.store')->post('/registro/bautizo/store','BautizosController@store');
+Route::name('bautizo.edit')->get('/registro/bautizo/{id}/edit', 'BautizosController@edit');
+Route::name('bautizo.update')->post('/registro/bautizo/{id}/update', 'BautizosController@update');
+Route::name('bautizo.destroy')->get('/registro/bautizo/{id}/destroy', 'BautizosController@destroy');
+Route::name('bautizo.show')->get('/registro/bautizo/{id}/show', 'BautizosController@show');
 /*
 Rutas para el moudlo de comunion
  */
