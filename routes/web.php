@@ -32,9 +32,9 @@ Route::name('bautizo.show')->get('/registro/bautizo/{id}/show', 'BautizosControl
 /*
 Rutas para el moudlo de comunion
  */
-Route::name('comunion.index')->get('/comunion/bautizo','ComunionesController@index');
-Route::name('comunion.create')->get('/comunion/bautizo/create','ComunionesController@create');
-Route::name('comunion.store')->post('/comunion/bautizo/','ComunionesController@store');
+Route::name('comunion.index')->get('/registro/comunion','ComunionesController@index');
+Route::name('comunion.create')->get('/registro/comunion/create','ComunionesController@create');
+Route::name('comunion.store')->post('/registro/comunion/store','ComunionesController@store');
 
 /*
 Rutas para el moudlo de bautizo

@@ -52,7 +52,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="form-group ">
+                        <div class="form-group has-success">
                             <label class="control-label">Fecha de bautizo</label>
                             <input class="datepicker form-control" name="fecha_bautizo" id="fecha_bautizo" type="text" value=""/>
                         </div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <div class="form-group ">
+                        <div class="form-group has-success">
                             <label class="control-label">Fecha de Nacimiento</label>
                             <input class="datepicker form-control" name="fecha_nacimiento" id="fecha_nacimiento" type="text" value=""/>
                         </div>

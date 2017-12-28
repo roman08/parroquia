@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Comunion;
 class ComunionesController extends Controller
 {
     /**
@@ -13,17 +13,18 @@ class ComunionesController extends Controller
      */
     public function index()
     {
-         return view('admin.bautizos.index');
+        $comuniones = Comunion::paginate(10);
+        return view('admin.comuniones.index',compact('comuniones'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+    */
     public function create()
     {
-        return view('admin.bautizos.create');
+        return view('admin.comuniones.create');
     }
 
     /**
@@ -35,6 +36,21 @@ class ComunionesController extends Controller
     public function store(Request $request)
     {
         
+        $comunion = new Comunion();
+        $comunion->Apaterno = $request->input('Apaterno');
+        $comunion->Amaterno = $request->input('Amaterno');
+        $comunion->nombres = $request->input('nombres');
+        $comunion->padre = $request->input('padre');
+        $comunion->madre = $request->input('madre');
+        $comunion->padrino = $request->input('padrino');
+        $comunion->madrina = $request->input('madrina');
+        $comunion->fecha_bautizo = $request->input('fecha_bautizo');
+        $comunion->folio = $request->input('folio');
+        
+        if($comunion->save())
+        {
+            return redirect('/registro/comunion');
+        }
     }
 
     /**

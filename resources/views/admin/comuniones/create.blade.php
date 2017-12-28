@@ -10,23 +10,124 @@
     <div class="section ">
         <h2 class="title text-center">Nuevo Registro</h2>
 
-               <form action="{{ route('store') }}">
+               <form action="{{ route('comunion.store') }}" method="post">
                 {{csrf_field()}}
-                   <div class="col-sm-4">
-                        <div class="form-group label-floating">
-                            <label class="control-label">Nombre</label>
-                            <input type="text" class="form-control">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Folio</label>
+                                <input type="text" value="" class="form-control" name="folio" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="form-group label-floating has-success">
-                            <label class="control-label">Fecha actual</label>
-                            <input class="datepicker form-control" type="text" value="03/12/2016"/>
-                            <span class="form-control-feedback">
-                                <i class="material-icons">done</i>
-                            </span>
+                         <div class="col-sm-6">
+                            <div class="form-group has-success">
+                                <label class="control-label">Fecha de Comunión</label>
+                                <input class="datepicker form-control" name="fecha_bautizo" id="fecha" type="text" value=""/>
+                            </div>
                         </div>
-                    </div>
+                        
+                   </div>
+                   <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Apellido Paterno</label>
+                                <input type="text" value="" class="form-control" name="Apaterno" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Apellido Materno</label>
+                                <input type="text" value="" class="form-control" name="Amaterno" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Nombre(s)</label>
+                                <input type="text" value="" class="form-control" name="nombres" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-6">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Padre</label>
+                                <input type="text" value="" class="form-control" name="padre" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Madre</label>
+                                <input type="text" value="" class="form-control" name="madre" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-6">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Padrino</label>
+                                <input type="text" value="" class="form-control" name="padrino" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Madrina</label>
+                                <input type="text" value="" class="form-control" name="madrina" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Parroco</label>
+                                <input type="text" value="" class="form-control" name="parroco" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating has-success">
+                                <label class="control-label">Lugar de Bautizo</label>
+                                <input type="text" value="" class="form-control" name="madrina" />
+                                <span class="form-control-feedback">
+                                    <i class="material-icons">done</i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group has-success">
+                                <label class="control-label">Fecha de Bautizo</label>
+                                <input class="datepicker form-control" name="fecha_bautizo" id="fecha_bautizo_comunion" type="text" value=""/>
+                            </div>
+                        </div>
+                   </div>
+                    <a href="javascript:window.history.back();" class="btn btn-danger" type="submit">Regresar</a>
+                    <button class="btn btn-default" type="submit">Guardar Registro</button>
                </form>
 
 
