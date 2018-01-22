@@ -137,7 +137,8 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-default" type="submit">Guardar Registro</button>
+            <a class="btn btn-default" href="{{ route('bautizo.index')}}">Cancelar</a>
+            <button class="btn btn-primary" type="submit">Guardar Registro</button>
                </form>
 
 
