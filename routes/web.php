@@ -29,6 +29,9 @@ Route::name('bautizo.edit')->get('/registro/bautizo/{id}/edit', 'BautizosControl
 Route::name('bautizo.update')->post('/registro/bautizo/{id}/update', 'BautizosController@update');
 Route::name('bautizo.destroy')->get('/registro/bautizo/{id}/destroy', 'BautizosController@destroy');
 Route::name('bautizo.show')->get('/registro/bautizo/{id}/show', 'BautizosController@show');
+Route::name('bautizo.pdf')->get('/registro/bautizo/{id}/pdf', 'BautizosController@pdf');
+Route::name('bautizo.search')->get('/registro/bautizo/search', 'BautizosController@search');
+Route::name('personas.json')->get('/registro/bautizo/json', 'BautizosController@data');
 /*
 Rutas para el moudlo de comunion
  */

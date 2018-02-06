@@ -127,4 +127,51 @@ class BautizosController extends Controller
 
         return back();
     }
+
+    public function pdf($id)
+    {
+        $bautizo = Bautizo::find($id);
+        //dd($bautizo);
+       // return view('pdf')->with(compact('bautizo'));
+        //$pdf = \PDF::loadView('pdf',['bautizo' => $bautizo]);
+
+        $customPaper = array(0,0,22.6772,28.3465);
+        $pdf = \PDF::loadView('pdf',compact('bautizo'));
+        return $pdf->download('invoice.pdf');
+
+        //PDF::loadHTML($html)('a4', 'landscape')->setWarnings(false)->save('myfile.pdf')
+
+        //$pdf->setPaper(0,0,500,1000);
+        //$pdf->setPaper(array(100,100,0,0));
+        //$pdf->setPaper(0, 0, 22.6772, 22.6772, 'landscape');
+        //$pdf->setPaper(array(100,100,0,0));
+
+
+        //$pdf->set_paper($paper_size);
+
+
+        // $pdf->download('invoice.pdf');
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+
+        $bautizos = Bautizo::where('nombre','like',"%$query%")->paginate(5);
+
+        if($bautizos->count() >= 1)
+        {
+            //dd($bautizos);
+        return view('admin.bautizos.index',compact('bautizos'));
+        }else{
+            $bautizos = Bautizo::paginate(10);
+            return view('admin.bautizos.index',compact('bautizos'));
+        }
+    }
+
+    public function data()
+    {
+         $personas = Bautizo::pluck('nombre');
+        return $personas;
+    }
 }

@@ -18,7 +18,7 @@
     <link href="{{ asset('/css/bootstrap.min.css')}}" rel="stylesheet" />
     <link href="{{ asset('/css/material-kit.css')}}" rel="stylesheet"/>
     <link href="{{ asset('/css/datatables.min.css')}}" rel="stylesheet" />
-
+    @yield('styles')
 </head>
 
 <body class="@yield('body-class')">
@@ -124,4 +124,5 @@
              $('#bautizo').DataTable({});
         } );
     </script>
+    @yield('scripts')
 </html>
